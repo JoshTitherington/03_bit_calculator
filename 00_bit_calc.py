@@ -2,6 +2,8 @@
 
 # puts series of symbols at start and end of text (for emphasis)
 def statement_generator(text, decoration):
+    decor = decoration * 5
+    print(decor,text,decor)
 
 # displays instruction / information
 def instructions():
@@ -35,6 +37,7 @@ def user_choice():
 # checks input is a number more than given value
 def num_check(question, low):
     valid = False
+
     while not valid: 
 
         error = "Please enter a number more than "
@@ -54,13 +57,12 @@ def num_check(question, low):
                 print(error)
                 print()
 
-        except ValueError: 
+        except ValueError:
+            print("An error occured.")
+    return ""
 
 # calculates the # of bits for text (# of characters x 8)
 def text_bits():
-
-
-
     print()
     # ask user for a string...
     var_text = input("Enter some text: ")
@@ -76,9 +78,9 @@ def text_bits():
     print("We need {} bits to represent {}".format(num_bits, var_text))
     print()
 
-    return ""
+    #return ""
 
- finds # of bits for 24 bit colour
+    #finds # of bits for 24 bit colour
 
 
     # get width and height...
